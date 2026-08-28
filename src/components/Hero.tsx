@@ -69,11 +69,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display font-extrabold text-5xl md:text-7xl leading-[1.05] tracking-tight mb-4 text-slate-900 dark:text-white"
+            className="font-display font-extrabold text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.08] tracking-tight mb-4 text-slate-900 dark:text-white break-words"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             Saketh <br />
-            <span className="bg-gradient-to-r from-blue-500 via-violet-500 to-amber-500 bg-clip-text text-transparent bg-[size:200%] animate-[shimmer_5s_linear_infinite]">
+            <span className="bg-gradient-to-r from-blue-500 via-violet-500 to-amber-500 bg-clip-text text-transparent bg-[size:200%] animate-[shimmer_5s_linear_infinite] inline-block max-w-full break-words">
               Vedullapalli
             </span>
           </motion.h1>
@@ -83,11 +83,11 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-2xl font-bold tracking-wide uppercase text-slate-600 dark:text-gray-400 mb-6 flex items-center gap-2"
+            className="text-base sm:text-xl md:text-2xl font-bold tracking-wide uppercase text-slate-600 dark:text-gray-400 mb-6 flex items-center gap-2"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
-            <span>I am a</span>
-            <span className="text-blue-500 dark:text-blue-400 relative inline-block min-w-[150px]">
+            <span className="shrink-0">I am a</span>
+            <span className="text-blue-500 dark:text-blue-400 relative inline-block min-w-[140px] sm:min-w-[180px]">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={roleIndex}
@@ -95,7 +95,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.3 }}
-                  className="absolute left-0"
+                  className="absolute left-0 truncate"
                 >
                   {roles[roleIndex]}
                 </motion.span>
@@ -107,9 +107,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-slate-600 dark:text-gray-400 text-sm md:text-base leading-relaxed max-w-xl mb-8 font-light"
+            className="text-slate-600 dark:text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mb-8 font-light"
           >
-            Electronics & Communication Engineering student at Aditya University (Class of 2028). Building multi-tier architectures merging the precision of <strong>VLSI design</strong> and high-performance **full-stack software systems**.
+            Electronics & Communication Engineering student at Aditya University (Class of 2028). Building multi-tier architectures merging the precision of <strong className="text-slate-900 dark:text-white font-medium">VLSI design</strong> and high-performance <strong className="text-slate-900 dark:text-white font-medium">full-stack software systems</strong>.
           </motion.p>
 
           {/* Premium sweep buttons */}

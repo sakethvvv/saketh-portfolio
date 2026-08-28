@@ -244,59 +244,59 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="skills" ref={containerRef} className="py-24 px-6 bg-transparent border-t border-slate-200 dark:border-white/5 relative select-none">
-      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <section id="skills" ref={containerRef} className="py-16 sm:py-24 px-4 sm:px-6 bg-transparent border-t border-slate-200 dark:border-white/5 relative select-none">
+      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
         {/* Left column: static card descriptions */}
         <div className="lg:col-span-5 flex flex-col justify-start">
-          <span className="font-mono text-xs text-violet-500 dark:text-violet-400 tracking-[0.2em] uppercase mb-4 block">// expertise galaxy</span>
-          <h2 className="font-display font-extrabold text-3xl md:text-5xl text-slate-900 dark:text-white mb-6 tracking-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
+          <span className="font-mono text-xs text-violet-500 dark:text-violet-400 tracking-[0.2em] uppercase mb-3 sm:mb-4 block">// expertise galaxy</span>
+          <h2 className="font-display font-extrabold text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-slate-900 dark:text-white mb-4 sm:mb-6 tracking-tight leading-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
             The Skill Galaxy
           </h2>
-          <p className="text-slate-600 dark:text-white/60 text-sm md:text-base leading-relaxed mb-8 font-light">
+          <p className="text-slate-600 dark:text-white/60 text-xs sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 font-light">
             Forget boring progress bars. Play with my interactive tech stack. Drag your mouse or finger across the canvas to interact with the gravitational fields. Let the orbit pathways guide your discovery.
           </p>
 
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             <div
               onMouseEnter={playHoverSound}
               onClick={playClickSound}
-              className="p-4 rounded-2xl bg-slate-900/[0.03] dark:bg-white/[0.03] backdrop-blur-md border border-slate-200 dark:border-white/10 flex gap-4 items-center hover:border-blue-500/30 transition-all cursor-pointer"
+              className="p-3.5 sm:p-4 rounded-2xl bg-slate-900/[0.03] dark:bg-white/[0.03] backdrop-blur-md border border-slate-200 dark:border-white/10 flex gap-3 sm:gap-4 items-center hover:border-blue-500/30 transition-all cursor-pointer"
             >
-              <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
-                <Code className="w-5 h-5" />
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
+                <Code className="w-4 sm:w-5 h-4 sm:h-5" />
               </div>
               <div>
-                <h4 className="text-slate-900 dark:text-white font-bold text-sm">Languages</h4>
-                <p className="text-slate-500 dark:text-white/50 text-xs">C, Python, SQL, Java.</p>
+                <h4 className="text-slate-900 dark:text-white font-bold text-xs sm:text-sm">Languages</h4>
+                <p className="text-slate-500 dark:text-white/50 text-[11px] sm:text-xs">C, Python, SQL, Java.</p>
               </div>
             </div>
 
             <div
               onMouseEnter={playHoverSound}
               onClick={playClickSound}
-              className="p-4 rounded-2xl bg-slate-900/[0.03] dark:bg-white/[0.03] backdrop-blur-md border border-slate-200 dark:border-white/10 flex gap-4 items-center hover:border-violet-500/30 transition-all cursor-pointer"
+              className="p-3.5 sm:p-4 rounded-2xl bg-slate-900/[0.03] dark:bg-white/[0.03] backdrop-blur-md border border-slate-200 dark:border-white/10 flex gap-3 sm:gap-4 items-center hover:border-violet-500/30 transition-all cursor-pointer"
             >
-              <div className="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-600 dark:text-violet-400 flex items-center justify-center shrink-0">
-                <Cpu className="w-5 h-5" />
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-violet-500/10 text-violet-600 dark:text-violet-400 flex items-center justify-center shrink-0">
+                <Cpu className="w-4 sm:w-5 h-4 sm:h-5" />
               </div>
               <div>
-                <h4 className="text-slate-900 dark:text-white font-bold text-sm">VLSI & Hardware Systems</h4>
-                <p className="text-slate-500 dark:text-white/50 text-xs">Verilog HDL, AMBA, IC Layout, RTL.</p>
+                <h4 className="text-slate-900 dark:text-white font-bold text-xs sm:text-sm">VLSI & Hardware Systems</h4>
+                <p className="text-slate-500 dark:text-white/50 text-[11px] sm:text-xs">Verilog HDL, AMBA, IC Layout, RTL.</p>
               </div>
             </div>
 
             <div
               onMouseEnter={playHoverSound}
               onClick={playClickSound}
-              className="p-4 rounded-2xl bg-slate-900/[0.03] dark:bg-white/[0.03] backdrop-blur-md border border-slate-200 dark:border-white/10 flex gap-4 items-center hover:border-amber-500/30 transition-all cursor-pointer"
+              className="p-3.5 sm:p-4 rounded-2xl bg-slate-900/[0.03] dark:bg-white/[0.03] backdrop-blur-md border border-slate-200 dark:border-white/10 flex gap-3 sm:gap-4 items-center hover:border-amber-500/30 transition-all cursor-pointer"
             >
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
-                <Layout className="w-5 h-5" />
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+                <Layout className="w-4 sm:w-5 h-4 sm:h-5" />
               </div>
               <div>
-                <h4 className="text-slate-900 dark:text-white font-bold text-sm">Frameworks & Tools</h4>
-                <p className="text-slate-500 dark:text-white/50 text-xs">React, Node, AI Integration, SQLite, Git.</p>
+                <h4 className="text-slate-900 dark:text-white font-bold text-xs sm:text-sm">Frameworks & Tools</h4>
+                <p className="text-slate-500 dark:text-white/50 text-[11px] sm:text-xs">React, Node, AI Integration, SQLite, Git.</p>
               </div>
             </div>
           </div>

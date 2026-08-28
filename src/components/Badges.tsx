@@ -44,15 +44,15 @@ export default function Badges() {
   ];
 
   return (
-    <section id="badges" className="py-24 px-6 bg-transparent border-t border-slate-200 dark:border-white/5 relative overflow-hidden select-none">
+    <section id="badges" className="py-16 sm:py-24 px-4 sm:px-6 bg-transparent border-t border-slate-200 dark:border-white/5 relative overflow-hidden select-none">
       <div className="w-full max-w-6xl mx-auto">
         
-        <div className="text-center mb-16">
-          <span className="font-mono text-xs text-blue-500 dark:text-blue-400 tracking-[0.2em] uppercase mb-4 block">// credential system</span>
-          <h2 className="font-display font-extrabold text-3xl md:text-5xl text-slate-900 dark:text-white tracking-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
+        <div className="text-center mb-12 sm:mb-16">
+          <span className="font-mono text-xs text-blue-500 dark:text-blue-400 tracking-[0.2em] uppercase mb-3 sm:mb-4 block">// credential system</span>
+          <h2 className="font-display font-extrabold text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-slate-900 dark:text-white tracking-tight leading-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
             Ecosystem Badges
           </h2>
-          <p className="text-slate-500 dark:text-white/50 text-sm max-w-md mx-auto mt-4 font-light">
+          <p className="text-slate-500 dark:text-white/50 text-xs sm:text-sm max-w-md mx-auto mt-3 sm:mt-4 font-light">
             Ecosystem validations across Google, NVIDIA accelerated programs, and campus-level outreach.
           </p>
         </div>
@@ -66,7 +66,7 @@ export default function Badges() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className={`relative p-6 rounded-3xl bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md transition-all duration-300 ${badge.borderColor} group overflow-hidden flex flex-col justify-between hover:shadow-2xl hover:shadow-black/20 dark:hover:shadow-black/50`}
+              className={`relative p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md transition-all duration-300 ${badge.borderColor} group overflow-hidden flex flex-col justify-between hover:shadow-2xl hover:shadow-black/20 dark:hover:shadow-black/50`}
             >
               {/* Corner accent glow */}
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl ${badge.colorClass} blur-[40px] pointer-events-none opacity-40 group-hover:opacity-80 transition-opacity duration-300`} />
@@ -76,30 +76,30 @@ export default function Badges() {
 
               <div>
                 {/* Logo list row */}
-                <div className="flex items-center gap-2 mb-6">
+                <div className="flex items-center gap-2 mb-4 sm:mb-6">
                   {badge.logos.map((logo, lIdx) => (
-                    <div key={lIdx} className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-950/80 border border-slate-200 dark:border-white/10 p-2 flex items-center justify-center shadow-md dark:shadow-lg">
+                    <div key={lIdx} className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 dark:bg-slate-950/80 border border-slate-200 dark:border-white/10 p-2 flex items-center justify-center shadow-md dark:shadow-lg">
                       <img src={logo} alt="brand logo" className="w-full h-full object-contain filter brightness-95" />
                     </div>
                   ))}
                 </div>
 
-                <span className="font-mono text-[9px] uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold mb-1.5 block">
+                <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold mb-1.5 block">
                   {badge.kicker}
                 </span>
                 
-                <h3 className="font-display font-extrabold text-slate-900 dark:text-white text-lg tracking-tight mb-3 leading-snug" style={{ fontFamily: "'Syne', sans-serif" }}>
+                <h3 className="font-display font-extrabold text-slate-900 dark:text-white text-base sm:text-lg tracking-tight mb-2 sm:mb-3 leading-snug" style={{ fontFamily: "'Syne', sans-serif" }}>
                   {badge.title}
                 </h3>
 
-                <p className="text-slate-600 dark:text-gray-400 text-xs font-light leading-relaxed mb-6">
+                <p className="text-slate-600 dark:text-gray-400 text-xs sm:text-sm font-light leading-relaxed mb-4 sm:mb-6">
                   {badge.description}
                 </p>
               </div>
 
               {/* Pill badge footer indicator */}
-              <div className="flex justify-between items-center mt-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-600 dark:text-blue-400 text-[10px] uppercase font-mono tracking-widest font-bold">
+              <div className="flex justify-between items-center mt-3 sm:mt-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-600 dark:text-blue-400 text-[9px] sm:text-[10px] uppercase font-mono tracking-widest font-bold">
                   {badge.accentIcon}
                   <span>{badge.pill}</span>
                 </span>

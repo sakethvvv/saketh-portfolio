@@ -44,15 +44,15 @@ export default function Certificates() {
   };
 
   return (
-    <section id="certifications" className="py-24 px-6 bg-transparent border-t border-slate-200 dark:border-white/5 relative overflow-hidden select-none">
+    <section id="certifications" className="py-16 sm:py-24 px-4 sm:px-6 bg-transparent border-t border-slate-200 dark:border-white/5 relative overflow-hidden select-none">
       <div className="w-full max-w-6xl mx-auto">
         
-        <div className="text-center mb-16">
-          <span className="font-mono text-xs text-amber-600 dark:text-amber-400 tracking-[0.2em] uppercase mb-4 block">// technical credentials</span>
-          <h2 className="font-display font-extrabold text-3xl md:text-5xl text-slate-900 dark:text-white tracking-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
+        <div className="text-center mb-12 sm:mb-16">
+          <span className="font-mono text-xs text-amber-600 dark:text-amber-400 tracking-[0.2em] uppercase mb-3 sm:mb-4 block">// technical credentials</span>
+          <h2 className="font-display font-extrabold text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-slate-900 dark:text-white tracking-tight leading-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
             Certifications & Milestones
           </h2>
-          <p className="text-slate-500 dark:text-white/50 text-sm max-w-md mx-auto mt-4 font-light">
+          <p className="text-slate-500 dark:text-white/50 text-xs sm:text-sm max-w-md mx-auto mt-3 sm:mt-4 font-light">
             Verified technical accomplishments validating core expertise levels in system development.
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function Certificates() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.12 }}
-              className="relative p-6 rounded-3xl bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md cursor-pointer group flex flex-col justify-between items-center text-center shadow-xl hover:shadow-2xl hover:border-amber-500/30 dark:hover:border-amber-400/30 hover:-translate-y-2 transition-all duration-300 overflow-hidden select-none"
+              className="relative p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md cursor-pointer group flex flex-col justify-between items-center text-center shadow-xl hover:shadow-2xl hover:border-amber-500/30 dark:hover:border-amber-400/30 hover:-translate-y-2 transition-all duration-300 overflow-hidden select-none"
             >
               {/* Golden circular glowing backplate */}
               <div className="absolute top-0 w-32 h-32 bg-amber-500/5 blur-[35px] pointer-events-none group-hover:scale-150 transition-transform duration-500" />
@@ -80,21 +80,21 @@ export default function Certificates() {
 
               <div className="flex flex-col items-center">
                 {/* Icon bubble */}
-                <div className="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-3xl mb-6 shadow-lg shadow-black/10 dark:shadow-black/20 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-6 shadow-lg shadow-black/10 dark:shadow-black/20 group-hover:scale-110 transition-transform duration-300">
                   {cert.icon}
                 </div>
 
-                <span className="font-mono text-[9px] uppercase tracking-wider text-slate-500 dark:text-gray-400 mb-1.5 block">
+                <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-slate-500 dark:text-gray-400 mb-1.5 block">
                   {cert.issuer}
                 </span>
 
-                <h3 className="font-display font-bold text-slate-900 dark:text-white text-base leading-snug tracking-tight mb-4 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors" style={{ fontFamily: "'Syne', sans-serif" }}>
+                <h3 className="font-display font-bold text-slate-900 dark:text-white text-sm sm:text-base leading-snug tracking-tight mb-4 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors" style={{ fontFamily: "'Syne', sans-serif" }}>
                   {cert.title}
                 </h3>
               </div>
 
               {/* Verified pill badge */}
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-[10px] font-mono tracking-wide uppercase font-bold">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-[9px] sm:text-[10px] font-mono tracking-wide uppercase font-bold">
                 <Star className="w-3 h-3 fill-current" />
                 <span>{cert.badge}</span>
               </span>

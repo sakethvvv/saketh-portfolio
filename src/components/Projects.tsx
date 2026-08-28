@@ -110,7 +110,7 @@ export default function Projects() {
           setSelectedProject(project);
         }}
         style={{ transform: tilt, transition: tilt ? "none" : "all 0.5s ease-out" }}
-        className="relative p-6 rounded-3xl bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md cursor-pointer group overflow-hidden flex flex-col justify-between hover:shadow-2xl hover:shadow-black/30 dark:hover:shadow-black/60 select-none"
+        className="relative p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md cursor-pointer group overflow-hidden flex flex-col justify-between hover:shadow-2xl hover:shadow-black/30 dark:hover:shadow-black/60 select-none"
       >
         {/* Glow spotlight overlay */}
         <div
@@ -130,40 +130,40 @@ export default function Projects() {
 
         <div>
           {/* Card emoji avatar */}
-          <div className="w-12 h-12 rounded-xl bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 flex items-center justify-center text-2xl mb-6 shadow-md shadow-black/10 dark:shadow-black/30 group-hover:scale-105 transition-transform duration-300">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6 shadow-md shadow-black/10 dark:shadow-black/30 group-hover:scale-105 transition-transform duration-300">
             {project.emoji}
           </div>
 
           {/* Title */}
-          <h3 className="font-display font-extrabold text-slate-900 dark:text-white text-xl mb-3 tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" style={{ fontFamily: "'Syne', sans-serif" }}>
+          <h3 className="font-display font-extrabold text-slate-900 dark:text-white text-lg sm:text-xl mb-2 sm:mb-3 tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-snug" style={{ fontFamily: "'Syne', sans-serif" }}>
             {project.name}
           </h3>
 
-          <p className="text-slate-500 dark:text-white/50 text-xs font-light leading-relaxed mb-6">
+          <p className="text-slate-500 dark:text-white/50 text-xs sm:text-sm font-light leading-relaxed mb-4 sm:mb-6">
             {project.description}
           </p>
         </div>
 
         <div>
           {/* Tags */}
-          <div className="flex flex-wrap gap-1.5 mb-6">
+          <div className="flex flex-wrap gap-1.5 mb-4 sm:mb-6">
             {project.tags.map((t, idx) => (
-              <span key={idx} className="px-2 py-0.5 rounded bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 text-[9px] font-mono text-slate-500 dark:text-white/50">
+              <span key={idx} className="px-2 py-0.5 rounded bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 text-[9px] sm:text-[10px] font-mono text-slate-500 dark:text-white/50">
                 {t}
               </span>
             ))}
           </div>
 
-          <div className="flex justify-between items-center border-t border-slate-200/60 dark:border-white/5 pt-4">
-            <span className="text-[10px] uppercase font-mono tracking-wider text-blue-600 dark:text-blue-400 font-bold group-hover:translate-x-1.5 transition-transform flex items-center gap-1">
-              <span>View Specifications</span>
+          <div className="flex justify-between items-center border-t border-slate-200/60 dark:border-white/5 pt-3 sm:pt-4">
+            <span className="text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-blue-600 dark:text-blue-400 font-bold group-hover:translate-x-1.5 transition-transform flex items-center gap-1">
+              <span>View Specs</span>
               <ArrowRight className="w-3 h-3" />
             </span>
 
             {/* Stars icon simulation */}
             <div className="flex items-center gap-1 text-slate-400 dark:text-gray-500 text-xs">
-              <Star className="w-3.5 h-3.5 fill-current text-amber-500/80" />
-              <span className="font-mono font-medium">Verified</span>
+              <Star className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-current text-amber-500/80" />
+              <span className="font-mono font-medium text-[10px] sm:text-xs">Verified</span>
             </div>
           </div>
         </div>
@@ -172,23 +172,23 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 px-6 bg-transparent border-t border-slate-200 dark:border-white/5 relative overflow-hidden select-none">
+    <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6 bg-transparent border-t border-slate-200 dark:border-white/5 relative overflow-hidden select-none">
       <div className="w-full max-w-6xl mx-auto">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>
-            <span className="font-mono text-xs text-blue-500 dark:text-blue-400 tracking-[0.2em] uppercase mb-4 block">// technical portfolio</span>
-            <h2 className="font-display font-extrabold text-3xl md:text-5xl text-slate-900 dark:text-white tracking-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
+            <span className="font-mono text-xs text-blue-500 dark:text-blue-400 tracking-[0.2em] uppercase mb-3 sm:mb-4 block">// technical portfolio</span>
+            <h2 className="font-display font-extrabold text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-slate-900 dark:text-white tracking-tight leading-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
               Featured Projects
             </h2>
-            <p className="text-slate-500 dark:text-white/50 text-xs md:text-sm mt-3 font-light max-w-md">
+            <p className="text-slate-500 dark:text-white/50 text-xs sm:text-sm mt-3 font-light max-w-md">
               From hardware RTL simulations to full-stack predictive software architectures.
             </p>
           </div>
 
           {/* Filtering buttons */}
-          <div className="flex bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 rounded-xl p-1 gap-1 self-start md:self-auto">
+          <div className="flex flex-wrap bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 rounded-xl p-1 gap-1 self-start md:self-auto">
             {(["all", "software", "vlsi"] as const).map((cat) => (
               <button
                 key={cat}
@@ -197,7 +197,7 @@ export default function Projects() {
                   setFilter(cat);
                 }}
                 onMouseEnter={playHoverSound}
-                className={`px-4 py-1.5 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all cursor-pointer ${
+                className={`px-3 sm:px-4 py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold tracking-wider uppercase transition-all cursor-pointer ${
                   filter === cat
                     ? "bg-blue-500 text-white shadow-md shadow-blue-500/10"
                     : "text-slate-500 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white"

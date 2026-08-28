@@ -65,17 +65,17 @@ export default function GithubSection() {
   }
 
   return (
-    <section id="github" className="py-24 px-6 bg-transparent border-t border-slate-200 dark:border-white/5 relative overflow-hidden select-none">
+    <section id="github" className="py-16 sm:py-24 px-4 sm:px-6 bg-transparent border-t border-slate-200 dark:border-white/5 relative overflow-hidden select-none">
       <div className="w-full max-w-6xl mx-auto">
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-6">
           <div>
-            <span className="font-mono text-xs text-blue-500 dark:text-blue-400 tracking-[0.2em] uppercase mb-4 block">// software architecture</span>
-            <h2 className="font-display font-extrabold text-3xl md:text-5xl text-slate-900 dark:text-white tracking-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
+            <span className="font-mono text-xs text-blue-500 dark:text-blue-400 tracking-[0.2em] uppercase mb-3 sm:mb-4 block">// software architecture</span>
+            <h2 className="font-display font-extrabold text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-slate-900 dark:text-white tracking-tight leading-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
               Open Source Activity
             </h2>
-            <p className="text-slate-500 dark:text-white/50 text-xs md:text-sm mt-3 font-light max-w-md">
+            <p className="text-slate-500 dark:text-white/50 text-xs sm:text-sm mt-3 font-light max-w-md">
               Verilog logic repositories and full-stack software schemas tracked on public registries.
             </p>
           </div>
@@ -84,7 +84,7 @@ export default function GithubSection() {
             href={`https://github.com/${stats.username}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900/[0.03] dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 text-slate-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-bold text-xs tracking-wider uppercase transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-slate-900/[0.03] dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 text-slate-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-bold text-[11px] sm:text-xs tracking-wider uppercase transition-all cursor-pointer"
           >
             <Github className="w-4 h-4" />
             <span>Visit GitHub Profile</span>
@@ -92,50 +92,50 @@ export default function GithubSection() {
         </div>
 
         {/* Profile Stats summary cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          <div className="p-5 bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md rounded-3xl flex items-center gap-4">
-            <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 dark:text-blue-400 flex items-center justify-center">
-              <BookOpen className="w-5 h-5" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
+          <div className="p-4 sm:p-5 bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl flex items-center gap-3 sm:gap-4">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-500/10 text-blue-500 dark:text-blue-400 flex items-center justify-center shrink-0">
+              <BookOpen className="w-4 sm:w-5 h-4 sm:h-5" />
             </div>
             <div>
-              <span className="block text-slate-900 dark:text-white font-extrabold text-xl leading-tight font-mono">{stats.public_repos}</span>
-              <span className="text-[10px] uppercase text-slate-500 dark:text-white/40 tracking-wider">Repositories</span>
+              <span className="block text-slate-900 dark:text-white font-extrabold text-lg sm:text-xl leading-tight font-mono">{stats.public_repos}</span>
+              <span className="text-[9px] sm:text-[10px] uppercase text-slate-500 dark:text-white/40 tracking-wider">Repos</span>
             </div>
           </div>
 
-          <div className="p-5 bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md rounded-3xl flex items-center gap-4">
-            <div className="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-500 dark:text-violet-400 flex items-center justify-center">
-              <Star className="w-5 h-5 fill-current" />
+          <div className="p-4 sm:p-5 bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl flex items-center gap-3 sm:gap-4">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-violet-500/10 text-violet-500 dark:text-violet-400 flex items-center justify-center shrink-0">
+              <Star className="w-4 sm:w-5 h-4 sm:h-5 fill-current" />
             </div>
             <div>
-              <span className="block text-slate-900 dark:text-white font-extrabold text-xl leading-tight font-mono">{stats.total_stars}</span>
-              <span className="text-[10px] uppercase text-slate-500 dark:text-white/40 tracking-wider">Total Stars</span>
+              <span className="block text-slate-900 dark:text-white font-extrabold text-lg sm:text-xl leading-tight font-mono">{stats.total_stars}</span>
+              <span className="text-[9px] sm:text-[10px] uppercase text-slate-500 dark:text-white/40 tracking-wider">Stars</span>
             </div>
           </div>
 
-          <div className="p-5 bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md rounded-3xl flex items-center gap-4">
-            <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 dark:text-amber-400 flex items-center justify-center">
-              <Layers className="w-5 h-5" />
+          <div className="p-4 sm:p-5 bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl flex items-center gap-3 sm:gap-4">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-500/10 text-amber-500 dark:text-amber-400 flex items-center justify-center shrink-0">
+              <Layers className="w-4 sm:w-5 h-4 sm:h-5" />
             </div>
             <div>
-              <span className="block text-slate-900 dark:text-white font-extrabold text-xl leading-tight font-mono">{stats.followers}</span>
-              <span className="text-[10px] uppercase text-slate-500 dark:text-white/40 tracking-wider">Followers</span>
+              <span className="block text-slate-900 dark:text-white font-extrabold text-lg sm:text-xl leading-tight font-mono">{stats.followers}</span>
+              <span className="text-[9px] sm:text-[10px] uppercase text-slate-500 dark:text-white/40 tracking-wider">Followers</span>
             </div>
           </div>
 
-          <div className="p-5 bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md rounded-3xl flex items-center gap-4">
-            <div className="w-10 h-10 rounded-xl bg-green-500/10 text-green-500 dark:text-green-400 flex items-center justify-center">
-              <Activity className="w-5 h-5" />
+          <div className="p-4 sm:p-5 bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl flex items-center gap-3 sm:gap-4">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-green-500/10 text-green-500 dark:text-green-400 flex items-center justify-center shrink-0">
+              <Activity className="w-4 sm:w-5 h-4 sm:h-5" />
             </div>
             <div>
-              <span className="block text-slate-900 dark:text-white font-extrabold text-xl leading-tight font-mono">Active</span>
-              <span className="text-[10px] uppercase text-slate-500 dark:text-white/40 tracking-wider">Commit Stream</span>
+              <span className="block text-slate-900 dark:text-white font-extrabold text-lg sm:text-xl leading-tight font-mono">Active</span>
+              <span className="text-[9px] sm:text-[10px] uppercase text-slate-500 dark:text-white/40 tracking-wider">Stream</span>
             </div>
           </div>
         </div>
 
         {/* Contribution Graph Panel */}
-        <div className="p-6 bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md rounded-3xl mb-8 overflow-x-auto">
+        <div className="p-4 sm:p-6 bg-slate-900/[0.03] dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl mb-6 sm:mb-8 overflow-x-auto">
           <div className="flex items-center justify-between mb-4 min-w-[640px]">
             <h4 className="text-slate-900 dark:text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
               <Activity className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
