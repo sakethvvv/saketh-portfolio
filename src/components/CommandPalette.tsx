@@ -96,6 +96,12 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
     { name: "Jump to Contact Gateway", section: "contact" },
   ];
 
+  const handleOpenResume = () => {
+    playClickSound();
+    window.open("https://drive.google.com/file/d/1Nztp4roeJz1LZq2jg7NPyyR01F9DdFyo/view?usp=sharing", "_blank", "noopener,noreferrer");
+    onClose();
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -173,6 +179,22 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
                     </button>
                   ))}
                 </div>
+              </div>
+
+              {/* Quick Actions */}
+              <div>
+                <h4 className="text-[10px] uppercase font-mono tracking-wider text-slate-500 dark:text-gray-500 mb-2 font-semibold">Quick Actions</h4>
+                <button
+                  onClick={handleOpenResume}
+                  onMouseEnter={playHoverSound}
+                  className="w-full flex items-center justify-between p-3 rounded-xl bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/30 text-blue-600 dark:text-blue-400 font-mono text-xs cursor-pointer hover:bg-blue-500/20 transition-all group"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <Download className="w-4 h-4" />
+                    <span className="font-semibold">Open & Download Saketh's Official Resume (PDF)</span>
+                  </div>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </button>
               </div>
 
               {/* Navigation quick links */}

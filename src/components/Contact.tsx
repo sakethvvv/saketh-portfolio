@@ -87,7 +87,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://linkedin.com/in/saketh-vedullapalli"
+              href="https://www.linkedin.com/in/saketh-vedullapalli-186011307/"
               target="_blank"
               rel="noopener noreferrer"
               onClick={playClickSound}
@@ -99,7 +99,7 @@ export default function Contact() {
               </div>
               <div>
                 <span className="block text-slate-400 dark:text-white/40 text-[10px] uppercase tracking-wider font-semibold">LinkedIn Network</span>
-                <span className="text-slate-800 dark:text-white text-sm font-medium font-mono">saketh-vedullapalli</span>
+                <span className="text-slate-800 dark:text-white text-sm font-medium font-mono">saketh-vedullapalli-186011307</span>
               </div>
             </a>
 

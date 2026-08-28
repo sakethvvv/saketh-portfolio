@@ -78,7 +78,8 @@ Certifications & Milestones:
 
 Contact & Links:
 - Email: sakethvedullapalli@gmail.com
-- LinkedIn: https://linkedin.com/in/saketh-vedullapalli
+- Website: https://sakethv-portfolio.pages.dev/
+- LinkedIn: https://www.linkedin.com/in/saketh-vedullapalli-186011307/
 - GitHub: https://github.com/sakethvvv
 - Current Residence: Kakinada, Andhra Pradesh, India
 
@@ -129,7 +130,7 @@ app.post("/api/chat", async (req, res) => {
     });
 
     const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: "gemini-3.6-flash",
       contents: formattedContents,
       config: {
         systemInstruction: SAKETH_PORTFOLIO_CONTEXT,
@@ -140,7 +141,24 @@ app.post("/api/chat", async (req, res) => {
     res.json({ reply: response.text || "I apologize, I didn't generate a text response." });
   } catch (error: any) {
     console.error("Gemini API Error:", error);
-    res.status(500).json({ error: "Failed to generate AI response: " + error.message });
+    
+    // Provide a smart local fallback response so user never encounters a broken experience
+    const queryLower = (message || "").toLowerCase();
+    let fallbackText = "Saketh Vedullapalli is an ECE engineer at Aditya University (Class of 2028), Founder of KETH, with strong expertise in VLSI hardware design (Verilog HDL, AMBA protocols, Cadence) and full-stack software development (Python, C, SQL, React, TypeScript). You can reach him at sakethvedullapalli@gmail.com.";
+    
+    if (queryLower.includes("ea") || queryLower.includes("electronic arts")) {
+      fallbackText = "At Electronic Arts (EA), Saketh served as a Software Engineer Intern (Dec 2025 – Feb 2026), contributing to codebase optimization, high-throughput server modules, performance-critical configurations, and Python scripting workflows.";
+    } else if (queryLower.includes("keth")) {
+      fallbackText = "KETH (Knowledge Enhancement for Talent & Hiring) was founded by Saketh in 2025. It reshapes talent discovery, hosts technical workshops, and builds relational skill-mapping platforms for student developers.";
+    } else if (queryLower.includes("project") || queryLower.includes("cart") || queryLower.includes("alu")) {
+      fallbackText = "Saketh's highlighted projects include: 1) Verify Your Cart (AI fraud detection for e-commerce), 2) 4-Bit ALU in Verilog HDL with structural simulation, and 3) Fake Product Detector in Python & SQLite.";
+    } else if (queryLower.includes("resume") || queryLower.includes("cv")) {
+      fallbackText = "You can download Saketh's complete resume via the 'Download Resume' button on the hero section or directly at: https://drive.google.com/file/d/1Nztp4roeJz1LZq2jg7NPyyR01F9DdFyo/view?usp=sharing";
+    } else if (queryLower.includes("contact") || queryLower.includes("email") || queryLower.includes("linkedin")) {
+      fallbackText = "You can contact Saketh via email at sakethvedullapalli@gmail.com or on LinkedIn at linkedin.com/in/saketh-vedullapalli-186011307.";
+    }
+
+    res.json({ reply: fallbackText, fallback: true });
   }
 });
 

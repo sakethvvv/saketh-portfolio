@@ -42,7 +42,7 @@ export default function Hero() {
   };
 
   const downloadResume = () => {
-    window.open("https://docs.google.com/uc?export=download&id=1zQ52vOjoZSN9T8UY922UqqEB5eM5G2_F", "_blank");
+    window.open("https://drive.google.com/file/d/1Nztp4roeJz1LZq2jg7NPyyR01F9DdFyo/view?usp=sharing", "_blank", "noopener,noreferrer");
   };
 
   const scrollToSection = (id: string) => {
