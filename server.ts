@@ -78,7 +78,7 @@ Certifications & Milestones:
 
 Contact & Links:
 - Email: sakethvedullapalli@gmail.com
-- Website: https://sakethv-portfolio.pages.dev/
+- Website: https://sakethvvv.github.io/saketh-portfolio/
 - LinkedIn: https://www.linkedin.com/in/saketh-vedullapalli-186011307/
 - GitHub: https://github.com/sakethvvv
 - Current Residence: Kakinada, Andhra Pradesh, India

@@ -87,7 +87,7 @@ export default function App() {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="https://sakethv-portfolio.pages.dev/"
+                href="https://sakethvvv.github.io/saketh-portfolio/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Live Website"
